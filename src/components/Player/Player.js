@@ -7,11 +7,11 @@ const Player = ({ player, handleExTime }) => {
     const { name, img, age, timeReq } = player;
 
     return (
-        <div className='player rounded-md'>
+        <div className='player rounded-md border border-slate-600'>
             <div className="player-img">
                 <img src={img} alt="" className='h-[200px] w-full rounded-tl-md rounded-tr-md' />
             </div>
-            <div className="player-details pt-5 pl-3 shadow-[5px,5px,10px, #fff]">
+            <div className="player-details pt-5 pl-3 text-slate-200">
                 <h1 className='text-2xl font-semibold'>{name}</h1>
                 <p className='my-1'>Age: {age}</p>
                 <p>Time Required: {timeReq}s</p>
