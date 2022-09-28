@@ -13,27 +13,27 @@ const Cart = ({ exerciseTime }) => {
     return (
         <div>
             <div className="author-info">
-                <div className='flex items-center pt-4 pb-5 my-4 border-b border-slate-500'>
+                <div className='flex flex-col md:flex-row items-center pt-4 pb-5 my-4 border-b border-slate-500'>
                     <img src={myImg} alt="" className='h-16 w-16 rounded-full' />
-                    <div className='ml-5 text-slate-300'>
+                    <div className='ml-5 mt-4 md:mt-0 text-slate-300'>
                         <h1>Rakib Ahmed</h1>
                         <p>Madrid, Spain</p>
                     </div>
                 </div>
-                <div className="physical-info rounded-lg py-3 flex justify-around">
-                    <div className='shadow-lg shadow-cyan-600/50 flex justify-center items-center rounded-full h-[90px] w-[90px] text-center border-2 border-cyan-500'>
+                <div className="physical-info rounded-lg py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
+                    <div className='col-span-1 mx-auto lg:mx-0 shadow-lg shadow-cyan-600/50 flex justify-center items-center rounded-full h-[90px] w-[90px] text-center border-2 border-cyan-500'>
                         <div>
                             <p><span className='text-3xl text-cyan-500 font-semibold'>56</span> <span className='text-slate-300'>kg</span></p>
                             <p className='text-slate-100'>Weight</p>
                         </div>
                     </div>
-                    <div className='shadow-lg shadow-cyan-600/50 flex justify-center items-center rounded-full h-[90px] w-[90px] text-center border-2 border-cyan-500'>
+                    <div className='col-span-1 mx-auto lg:mx-0 mt-5 md:mt-0 shadow-lg shadow-cyan-600/50 flex justify-center items-center rounded-full h-[90px] w-[90px] text-center border-2 border-cyan-500'>
                         <div>
                             <p className='text-3xl text-cyan-500 font-semibold'>5.3</p>
                             <p className='text-slate-100'>Height</p>
                         </div>
                     </div>
-                    <div className='shadow-lg shadow-cyan-600/50 flex justify-center items-center rounded-full h-[90px] w-[90px] text-center border-2 border-cyan-500'>
+                    <div className='col-span-1 md:col-span-2 lg:col-span-1 mt-5 lg:mt-0 mx-auto lg:mx-0 shadow-lg shadow-cyan-600/50 flex justify-center items-center rounded-full h-[90px] w-[90px] text-center border-2 border-cyan-500'>
                         <div>
                             <p><span className='text-3xl text-cyan-500 font-semibold'>22</span> <span className='text-slate-300 text-sm'>years</span></p>
                             <p className='text-slate-100'>Age</p>
@@ -44,12 +44,27 @@ const Cart = ({ exerciseTime }) => {
 
             <div className="added-break-section mt-10">
                 <h1 className='mb-2'>Add A Break</h1>
-                <div className='flex justify-between shadow-lg shadow-cyan-700/50 py-5 rounded-md px-2 drop-shadow-2xl'>
-                    <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="10">10s</button>
-                    <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="20">20s</button>
-                    <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="30">30s</button>
-                    <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="40">40s</button>
-                    <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="50">50s</button>
+                <div className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 justify-between shadow-lg shadow-cyan-700/50 py-5 rounded-md px-2 drop-shadow-2xl'>
+
+                    <div className='text-center'>
+                        <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="10">10s</button>
+                    </div>
+
+                    <div className='text-center'>
+                        <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="20">20s</button>
+                    </div>
+
+                    <div className='text-center'>
+                        <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="30">30s</button>
+                    </div>
+
+                    <div className='text-center mt-3 lg:mt-0'>
+                        <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="40">40s</button>
+                    </div>
+
+                    <div className='text-center mt-3 lg:mt-0'>
+                        <button onClick={(e) => handleBreakTime(e)} className='h-11 w-11 text-slate-100 border-2 border-cyan-400 text-md font-semibold shadow-lg shadow-cyan-600/50 rounded-full focus:bg-cyan-400' value="50">50s</button>
+                    </div>
                 </div>
             </div>
 
