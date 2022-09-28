@@ -1,11 +1,13 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 
 const Cart = ({ exerciseTime }) => {
 
-    console.log(exerciseTime)
-
+    const [breakTime, setBreakTime] = useState(0);
+    const handleBreakTime = (e) => {
+        setBreakTime(e.target.value)
+    }
 
     return (
         <div>
@@ -35,23 +37,23 @@ const Cart = ({ exerciseTime }) => {
             <div className="added-break-section">
                 <h1>Add A Break</h1>
                 <div className='flex justify-between bg-slate-200 py-3 px-2'>
-                    <button className='h-10 w-10 text-md bg-white font-semibold border rounded-full'>10s</button>
-                    <button className='h-10 w-10 text-md bg-white font-semibold border rounded-full'>20s</button>
-                    <button className='h-10 w-10 text-md bg-white font-semibold border rounded-full'>30s</button>
-                    <button className='h-10 w-10 text-md bg-white font-semibold border rounded-full'>40s</button>
-                    <button className='h-10 w-10 text-md bg-white font-semibold border rounded-full'>50s</button>
+                    <button onClick={(e) => handleBreakTime(e)} className='h-10 w-10 text-md bg-white font-semibold border rounded-full' value="10">10s</button>
+                    <button onClick={(e) => handleBreakTime(e)} className='h-10 w-10 text-md bg-white font-semibold border rounded-full' value="20">20s</button>
+                    <button onClick={(e) => handleBreakTime(e)} className='h-10 w-10 text-md bg-white font-semibold border rounded-full' value="30">30s</button>
+                    <button onClick={(e) => handleBreakTime(e)} className='h-10 w-10 text-md bg-white font-semibold border rounded-full' value="40">40s</button>
+                    <button onClick={(e) => handleBreakTime(e)} className='h-10 w-10 text-md bg-white font-semibold border rounded-full' value="50">50s</button>
                 </div>
             </div>
 
             <div className="exercise-details mt-10">
-                <h1>Exercise Details</h1>
-                <div className='flex justify-between bg-slate-200 text-black'>
-                    <span>Exercise Time</span>
+                <h1 className='mb-3'>Exercise Details</h1>
+                <div className='flex justify-between bg-slate-200 p-3 rounded-md'>
+                    <span className='font-semibold text-black'>Exercise Time</span>
                     <span>{exerciseTime} second</span>
                 </div>
-                <div className='flex justify-between bg-slate-200 text-black mt-5'>
-                    <span>Break Time</span>
-                    <span> second</span>
+                <div className='flex justify-between bg-slate-200 p-3 mt-5 rounded-md'>
+                    <span className='font-semibold text-black'>Break Time</span>
+                    <span>{breakTime} second</span>
                 </div>
 
                 <button className='bg-green-500 text-white w-full py-2 text-md mt-10'>Activity Completed</button>
