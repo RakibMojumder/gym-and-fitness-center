@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Player from '../Player/Player';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFootball } from '@fortawesome/free-solid-svg-icons';
+import Cart from '../Cart/Cart';
 
 
 
@@ -27,8 +28,8 @@ const Home = () => {
                         {players.map(player => <Player player={player} key={player.id}></Player>)}
                     </div>
                 </div>
-                <div className="activity-section col-span-5 md:col-span-4 lg:col-span-3 border">
-                    <h1>hello</h1>
+                <div className="activity-section col-span-5 md:col-span-4 lg:col-span-3 border px-5">
+                    <Cart></Cart>
                 </div>
             </div>
         </div>
