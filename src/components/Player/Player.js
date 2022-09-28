@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
 const Player = ({ player }) => {
     const { name, img, age, timeReq } = player;
 
@@ -15,7 +15,9 @@ const Player = ({ player }) => {
                 <p>Time Required: {timeReq}</p>
             </div>
             <div className="add-btn mt-4">
-                <button className='w-full text-white h-12 bg-gradient-to-r from-cyan-400 to-pink-300'>ADD TO CART <FontAwesomeIcon icon={faShoppingCart} /></button>
+                <button className='w-full text-white h-12 bg-cyan-600'>ADD TO CART
+                    <span className='ml-3'><FontAwesomeIcon icon={faArrowRightLong} /></span>
+                </button>
             </div>
         </div>
     );
