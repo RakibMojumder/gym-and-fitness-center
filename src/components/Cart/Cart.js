@@ -1,6 +1,12 @@
+
 import React from 'react';
 
-const Cart = () => {
+
+const Cart = ({ exerciseTime }) => {
+
+    console.log(exerciseTime)
+
+
     return (
         <div>
             <div className="author-info">
@@ -35,6 +41,20 @@ const Cart = () => {
                     <button className='h-10 w-10 text-md bg-white font-semibold border rounded-full'>40s</button>
                     <button className='h-10 w-10 text-md bg-white font-semibold border rounded-full'>50s</button>
                 </div>
+            </div>
+
+            <div className="exercise-details mt-10">
+                <h1>Exercise Details</h1>
+                <div className='flex justify-between bg-slate-200 text-black'>
+                    <span>Exercise Time</span>
+                    <span>{exerciseTime} second</span>
+                </div>
+                <div className='flex justify-between bg-slate-200 text-black mt-5'>
+                    <span>Break Time</span>
+                    <span> second</span>
+                </div>
+
+                <button className='bg-green-500 text-white w-full py-2 text-md mt-10'>Activity Completed</button>
             </div>
         </div>
     );

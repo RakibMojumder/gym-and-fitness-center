@@ -1,7 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
-const Player = ({ player }) => {
+
+
+const Player = ({ player, handleExTime }) => {
     const { name, img, age, timeReq } = player;
 
     return (
@@ -15,7 +17,7 @@ const Player = ({ player }) => {
                 <p>Time Required: {timeReq}s</p>
             </div>
             <div className="add-btn mt-4">
-                <button className='w-full text-white h-12 bg-cyan-600'>ADD TO CART
+                <button onClick={() => handleExTime(timeReq)} className='w-full text-white h-12 bg-cyan-600 rounded-bl-md rounded-br-md'>ADD TO CART
                     <span className='ml-3'><FontAwesomeIcon icon={faArrowRightLong} /></span>
                 </button>
             </div>

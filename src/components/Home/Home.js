@@ -8,6 +8,7 @@ import Cart from '../Cart/Cart';
 
 const Home = () => {
 
+    const [exerciseTime, setExerciseTime] = useState(0);
     const [players, setPlayers] = useState([]);
 
     useEffect(() => {
@@ -15,6 +16,13 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setPlayers(data));
     }, []);
+
+
+    // Handle exercise time 
+    const handleExTime = (time) => {
+        setExerciseTime(prev => prev + time);
+    };
+
 
     return (
         <div>
@@ -25,11 +33,15 @@ const Home = () => {
                         <p className='my-6'>Our Best Players</p>
                     </div>
                     <div className="player grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
-                        {players.map(player => <Player player={player} key={player.id}></Player>)}
+                        {players.map(player => <Player
+                            player={player}
+                            key={player.id}
+                            handleExTime={handleExTime}>
+                        </Player>)}
                     </div>
                 </div>
                 <div className="activity-section col-span-5 md:col-span-4 lg:col-span-3 border px-5">
-                    <Cart></Cart>
+                    <Cart exerciseTime={exerciseTime}></Cart>
                 </div>
             </div>
         </div>
