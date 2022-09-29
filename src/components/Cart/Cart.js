@@ -92,11 +92,11 @@ const Cart = ({ exerciseTime }) => {
                 <h1 className='mb-3'>Exercise Details</h1>
                 <div className='flex flex-col md:flex-row items-center md:justify-between bg-slate-200 p-2 rounded-md'>
                     <span className='font-semibold text-black'>Exercise Time</span>
-                    <span className='text-slate-500'>{exerciseTime} second</span>
+                    <span className='text-slate-500'><span className='text-cyan-500 font-bold'>{exerciseTime}</span> second</span>
                 </div>
                 <div className='flex flex-col md:flex-row items-center justify-between bg-slate-200 p-2 mt-5 rounded-md'>
                     <span className='font-semibold text-black'>Break Time</span>
-                    <span className='text-slate-500'>{breakTime} second</span>
+                    <span className='text-slate-500'><span className='text-cyan-500 font-bold'>{breakTime}</span> second</span>
                 </div>
 
                 <button onClick={handleActivity} className='bg-green-500 rounded-md text-white w-full py-2 text-md mt-10'>Activity Completed</button>

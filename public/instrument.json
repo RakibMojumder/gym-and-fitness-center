@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/qY8KF2L/training-branch.jpg",
+    "name": "Training Bench",
+    "mAge": 20,
+    "lAge": 24,
+    "timeReq": 30
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/26RK3Rg/dumble.jpg",
+    "name": "Dumbbell Set",
+    "mAge": 20,
+    "lAge": 25,
+    "timeReq": 20
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/R3365S9/barbell.jpg",
+    "name": "Barbell Set",
+    "mAge": 22,
+    "lAge": 27,
+    "timeReq": 25
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/bR7zpkJ/Kettlebell-Set.jpg",
+    "name": "Kettlebell Set",
+    "mAge": 20,
+    "lAge": 25,
+    "timeReq": 30
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/5jCkmLB/Pull-Up-Frame.jpg",
+    "name": "Pull-Up Frame and Bar",
+    "mAge": 18,
+    "lAge": 27,
+    "timeReq": 25
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/n60ZzJz/Treadmill.jpg",
+    "name": "Treadmill",
+    "mAge": 20,
+    "lAge": 25,
+    "timeReq": 20
+  }
+]
