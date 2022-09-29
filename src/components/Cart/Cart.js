@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import myImg from '../../img/my-img.jpg'
 import { addToDb, getFromLocalStorage } from '../../utilities';
-
+import Swal from 'sweetalert2'
 
 const Cart = ({ exerciseTime }) => {
 
@@ -19,6 +19,15 @@ const Cart = ({ exerciseTime }) => {
     const handleBreakTime = (e) => {
         setBreakTime(e.target.value);
         addToDb(e.target.value)
+    };
+
+    const handleActivity = () => {
+        console.log('hello')
+        Swal.fire(
+            'Good job!',
+            'Your Activity Completed!',
+            'success'
+        )
     }
 
     return (
@@ -90,7 +99,7 @@ const Cart = ({ exerciseTime }) => {
                     <span className='text-slate-500'>{breakTime} second</span>
                 </div>
 
-                <button className='bg-green-500 rounded-md text-white w-full py-2 text-md mt-10'>Activity Completed</button>
+                <button onClick={handleActivity} className='bg-green-500 rounded-md text-white w-full py-2 text-md mt-10'>Activity Completed</button>
             </div>
         </div>
     );
