@@ -27,7 +27,7 @@ const Home = () => {
     return (
         <div>
             <div className='home grid grid-cols-12 md:grid-cols-12'>
-                <div className="players-section my-20 px-8 col-span-7 md:col-span-8 lg:col-span-9">
+                <div className="players-section mt-20 mb-32 px-8 col-span-7 md:col-span-8 lg:col-span-9">
                     <div className="player-header">
                         <h1 className='uppercase text-cyan-500 text-4xl font-bold'>
                             <span className='mr-4 text-5xl'><FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon></span>
@@ -42,7 +42,7 @@ const Home = () => {
                         </Player>)}
                     </div>
                 </div>
-                <div className="activity-section col-span-5 md:col-span-4 lg:col-span-3 px-5">
+                <div className="activity-section col-span-5 md:col-span-4 lg:col-span-3 px-5 mt-20">
                     <Cart exerciseTime={exerciseTime}></Cart>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import myImg from '../../img/my-img.jpg'
+import myImg from '../../img/images.png'
 import { addToDb, getFromLocalStorage } from '../../utilities';
 import Swal from 'sweetalert2'
 
@@ -33,7 +33,7 @@ const Cart = ({ exerciseTime }) => {
     return (
         <div>
             <div className="author-info">
-                <div className='flex flex-col md:flex-row items-center pt-4 pb-5 my-4 border-b border-slate-500'>
+                <div className='flex flex-col md:flex-row items-center pt-4 pb-6 my-4 border-b border-slate-500'>
                     <img src={myImg} alt="" className='h-16 w-16 rounded-full' />
                     <div className='ml-5 mt-4 md:mt-0 text-slate-300'>
                         <h1>Rakib Ahmed</h1>
@@ -43,19 +43,19 @@ const Cart = ({ exerciseTime }) => {
                 <div className="physical-info rounded-lg py-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
                     <div className='col-span-1 mx-auto lg:mx-0 shadow-lg shadow-cyan-500/50 flex justify-center items-center rounded-full h-[90px] w-[90px] text-center border-2 border-cyan-500'>
                         <div>
-                            <p><span className='text-3xl text-cyan-500 font-semibold'>56</span> <span className='text-slate-300'>kg</span></p>
+                            <p><span className='text-3xl text-cyan-500 italic font-semibold'>56</span> <span className='text-slate-300'>kg</span></p>
                             <p className='text-slate-100'>Weight</p>
                         </div>
                     </div>
                     <div className='col-span-1 mx-auto lg:mx-0 mt-5 md:mt-0 shadow-lg shadow-cyan-500/50 flex justify-center items-center rounded-full h-[90px] w-[90px] text-center border-2 border-cyan-500'>
                         <div>
-                            <p className='text-3xl text-cyan-500 font-semibold'>5.3</p>
+                            <p className='text-3xl text-cyan-500 italic font-semibold'>5.3</p>
                             <p className='text-slate-100'>Height</p>
                         </div>
                     </div>
                     <div className='col-span-1 md:col-span-2 lg:col-span-1 mt-5 lg:mt-0 mx-auto lg:mx-0 shadow-lg shadow-cyan-500/50 flex justify-center items-center rounded-full h-[90px] w-[90px] text-center border-2 border-cyan-500'>
                         <div>
-                            <p><span className='text-3xl text-cyan-500 font-semibold'>22</span> <span className='text-slate-300 text-sm'>years</span></p>
+                            <p><span className='text-3xl text-cyan-500 italic font-semibold'>22</span> <span className='text-slate-300 text-sm'>years</span></p>
                             <p className='text-slate-100'>Age</p>
                         </div>
                     </div>
