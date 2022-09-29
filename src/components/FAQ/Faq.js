@@ -3,7 +3,7 @@ import React from 'react';
 const Faq = () => {
     return (
         <div>
-            <div className='mb-10 px-10'>
+            <div className='my-20 md:my-10 px-6 md:px-10'>
                 <hr />
             </div>
             <div className="faq-section grid grid-cols-12 mx-auto my-20 md:my-36">
